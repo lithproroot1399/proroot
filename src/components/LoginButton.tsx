@@ -14,8 +14,6 @@ export default function LoginButton() {
         </div>
       ) : (
         // biome-ignore lint/a11y/useButtonType: <explanation>
-
-        // biome-ignore lint/a11y/useButtonType: <explanation>
         <button onClick={() => signIn('google')}>Entrar com Google</button>
       )}
     </div>

@@ -31,7 +31,12 @@ export default function Contact() {
               </div>
               <div className="flex gap-2">
                 <MdOutlineEmail className="text-green-500 size-6" />
-                <h1 className="text-green-500">contato@proroot.pt</h1>
+                <a
+                  href="mailto:contato@proroot.pt?subject=Suporte&body=Olá, gostaria de mais informações..."
+                  className="text-green-500 hover:underline"
+                >
+                  contato@proroot.pt
+                </a>
               </div>
             </div>
           </div>

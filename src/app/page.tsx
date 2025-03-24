@@ -1,10 +1,8 @@
 import { Context } from '@/components/Context'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
-import LoginButton from '@/components/LoginButton'
 import Contact from '@/components/contact'
 import { Ignite } from '@/components/ignite'
-import Email from '@/components/mail'
 import { Network } from '@/components/network'
 import { Techs } from '@/components/techs'
 import Image from 'next/image'
@@ -21,13 +19,13 @@ export default function Home() {
           className="object-cover"
         />
       </div>
+
       <Context />
+      <Ignite />
       <Techs />
       <Network />
-      <Ignite />
       <Contact />
       <Footer />
-      <LoginButton />
     </>
   )
 }

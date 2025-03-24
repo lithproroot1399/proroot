@@ -3,11 +3,11 @@ import type { NextConfig } from 'next'
 const nextConfig: NextConfig = {
   /* config options here */
 }
-// next.config.js
 module.exports = {
   i18n: {
-    locales: ['en', 'pt-PT'], // Inglês e Português de Portugal
-    defaultLocale: 'en',
+    locales: ['en-US', 'pt-PT'], // Lista de idiomas suportados
+    defaultLocale: 'en-US', // Idioma padrão
+    localeDetection: false, // Se quer detectar automaticamente o idioma do navegador
   },
 }
 
