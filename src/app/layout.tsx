@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import './globals.css'
+import AuthProvider from '@/components/SessionProvider' // Importando o provider correto
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -19,15 +20,17 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
-  children: React.ReactNode
-}>) {
+}: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="pt">
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <AuthProvider>
+          {' '}
+          {/* Envolvendo dentro do Client Component */}
+          {children}
+        </AuthProvider>
       </body>
     </html>
   )

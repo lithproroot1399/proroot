@@ -16,7 +16,7 @@ const Footer = () => {
         {/* Ícones de Redes Sociais */}
         <div className="flex space-x-4">
           <a
-            href="https://github.com/login"
+            href="https://github.com/lithproroot1399?tab=repositories"
             className="text-white hover:text-gray-300"
             target="_blank"
             rel="noopener noreferrer"

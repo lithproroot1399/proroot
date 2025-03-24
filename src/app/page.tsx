@@ -1,6 +1,7 @@
 import { Context } from '@/components/Context'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import LoginButton from '@/components/LoginButton'
 import Contact from '@/components/contact'
 import { Ignite } from '@/components/ignite'
 import Email from '@/components/mail'
@@ -26,6 +27,7 @@ export default function Home() {
       <Ignite />
       <Contact />
       <Footer />
+      <LoginButton />
     </>
   )
 }
