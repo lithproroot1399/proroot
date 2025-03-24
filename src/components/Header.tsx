@@ -1,9 +1,10 @@
 'use client'
 
-import { Search } from 'lucide-react'
+import { Moon, Search, Sun } from 'lucide-react'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation' // Para manipular o idioma
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
+import { useTheme } from '../hooks/useTheme'
 
 export function SearchBar({ onSearch }: { onSearch: (query: string) => void }) {
   const [query, setQuery] = useState('')
@@ -11,11 +12,22 @@ export function SearchBar({ onSearch }: { onSearch: (query: string) => void }) {
   return (
     <div className="relative">
       <Search className="absolute left-3 top-2.5 w-4 h-4 text-zinc-400" />
+      <input
+        type="text"
+        placeholder="Pesquisar..."
+        className="w-full p-2 pl-10 text-sm border border-zinc-600 rounded-md bg-zinc-900 text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
+        value={query}
+        onChange={e => {
+          setQuery(e.target.value)
+          onSearch(e.target.value)
+        }}
+      />
     </div>
   )
 }
 
 const Header = () => {
+  const { theme, toggleTheme } = useTheme()
   const router = useRouter()
 
   // Função para trocar o idioma
@@ -35,23 +47,22 @@ const Header = () => {
 
         {/* Menu de Navegação */}
         <nav className="hidden md:flex space-x-6">
-          <a href="/" className="text-white hover:text-violet-500">
-            Home
-          </a>
-          <a href="/services" className="text-white hover:text-violet-500">
-            Serviços
-          </a>
-          <a href="/about" className="text-white hover:text-violet-500">
-            Sobre
-          </a>
-          <a href="/contact" className="text-white hover:text-violet-500">
-            Contato
-          </a>
+          {['Home', 'Serviços', 'Sobre', 'Contato'].map(item => (
+            <a
+              key={item}
+              href={`/${item.toLowerCase()}`}
+              className="text-white hover:text-violet-500"
+            >
+              {item}
+            </a>
+          ))}
         </nav>
 
-        {/* Ícones de Usuário e Pesquisa */}
+        {/* Ícones de Usuário, Pesquisa, Tema e Idioma */}
         <div className="flex items-center space-x-4">
-          <button type="button" className="text-white hover:text-gray-300">
+          {/* Ícone de Usuário */}
+          {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+          <button className="text-white hover:text-gray-300">
             <svg
               className="w-6 h-6"
               fill="none"
@@ -69,28 +80,32 @@ const Header = () => {
             </svg>
           </button>
 
-          {/* Ícones de Bandeira para troca de idioma */}
+          {/* Alternância de Tema */}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <button onClick={() => changeLanguage('pt-PT')}>
-            <Image
-              src="/assets/pt.png"
-              alt="Português"
-              width={40}
-              height={20}
-            />
+          <button
+            onClick={toggleTheme}
+            className="p-2 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white"
+          >
+            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
           </button>
 
-          {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <button onClick={() => changeLanguage('en')}>
-            <Image src="/assets/en.png" alt="English" width={40} height={20} />
-          </button>
+          {/* Ícones de Bandeira para troca de idioma */}
+          {['pt-PT', 'en'].map(locale => (
+            // biome-ignore lint/a11y/useButtonType: <explanation>
+            <button key={locale} onClick={() => changeLanguage(locale)}>
+              <Image
+                src={`/assets/${locale}.png`}
+                alt={locale}
+                width={40}
+                height={20}
+              />
+            </button>
+          ))}
         </div>
 
         {/* Menu Mobile */}
-        <button
-          type="button"
-          className="md:hidden text-white hover:text-gray-300"
-        >
+        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
+        <button className="md:hidden text-white hover:text-gray-300">
           <svg
             className="w-6 h-6"
             fill="none"

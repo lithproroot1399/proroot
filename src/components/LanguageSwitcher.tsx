@@ -12,7 +12,7 @@ export default function LanguageSwitcher() {
   }
 
   return (
-    <div className="flex gap-2">
+    <div className="flex">
       {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
       <button onClick={() => changeLanguage('en')}>
         <Image

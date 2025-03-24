@@ -36,12 +36,12 @@ export function News() {
                 >
                   ACEITAR
                 </button>
-                <IoMdTime className="size-5 text-zinc-300" />
+                <IoMdTime className="size-5 text-zinc-300 mr-4" />
               </div>
 
               <div className="m-3">
                 <IoNewspaperOutline className="size-6 text-lime-400" />
-                <p className="text-lime-300 font-semibold">ABRACE O MUNDO</p>
+                <p className="text-lime-300 font-semibold">BIBLIOTECA</p>
                 <h1 className="text-violet-500">
                   NOTICIAS DO DIA NO MUNDO TECH
                 </h1>
@@ -57,12 +57,12 @@ export function News() {
                 >
                   ACEITAR
                 </button>
-                <IoMdTime className="size-5 text-zinc-300" />
+                <IoMdTime className="size-5 text-zinc-300 mr-4" />
               </div>
 
               <div className="m-3">
                 <IoNewspaperOutline className="size-6 text-lime-400" />
-                <p className="text-lime-300 font-semibold">ABRACE O MUNDO</p>
+                <p className="text-lime-300 font-semibold">BIGS TECH</p>
                 <h1 className="text-violet-500">
                   NOTICIAS DO DIA NO MUNDO TECH
                 </h1>
