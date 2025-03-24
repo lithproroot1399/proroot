@@ -25,9 +25,9 @@ export default function Home() {
       <Ignite />
       <Techs />
       <Network />
+      <News />
       <Contact />
       <Footer />
-      <News />
     </>
   )
 }
