@@ -61,12 +61,6 @@ const Header = () => {
         {/* Ícones de Usuário, Pesquisa, Tema e Idioma */}
         <div className="flex items-center space-x-4">
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <button
-            onClick={toggleTheme}
-            className="p-2 rounded-md bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white"
-          >
-            {theme === 'dark' ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
 
           {/* Ícones de Bandeira para troca de idioma */}
           {['pt-PT', 'en'].map(locale => (
@@ -84,23 +78,6 @@ const Header = () => {
 
         {/* Menu Mobile */}
         {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-        <button className="md:hidden text-white hover:text-gray-300">
-          <svg
-            className="w-6 h-6"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <title>Ícone de menu</title>
-            <path
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M4 6h16M4 12h16m-7 6h7"
-            />
-          </svg>
-        </button>
       </div>
     </header>
   )
