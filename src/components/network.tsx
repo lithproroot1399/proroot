@@ -34,9 +34,27 @@ export function Network() {
           </div>
 
           <div className="flex">
-            <Image src={tech_1} alt={'foto'} width={250} height={100} />
-            <Image src={tech_2} alt={'foto'} width={250} height={100} />
-            <Image src={tech_3} alt={'foto'} width={250} height={100} />
+            <Image
+              className="transition-transform duration-300 hover:scale-110 hover:brightness-125"
+              src={tech_1}
+              alt={'foto'}
+              width={250}
+              height={100}
+            />
+            <Image
+              className="transition-transform duration-300 hover:scale-110 hover:brightness-125"
+              src={tech_2}
+              alt={'foto'}
+              width={250}
+              height={100}
+            />
+            <Image
+              className="transition-transform duration-300 hover:scale-110 hover:brightness-125"
+              src={tech_3}
+              alt={'foto'}
+              width={250}
+              height={100}
+            />
           </div>
         </div>
       </div>

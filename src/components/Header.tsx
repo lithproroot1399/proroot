@@ -60,27 +60,6 @@ const Header = () => {
 
         {/* Ícones de Usuário, Pesquisa, Tema e Idioma */}
         <div className="flex items-center space-x-4">
-          {/* Ícone de Usuário */}
-          {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-          <button className="text-white hover:text-gray-300">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <title>Ícone de usuário</title>
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M8 16v-1a4 4 0 00-4-4H3a4 4 0 000 8h1a4 4 0 004-4zM16 12v-1a4 4 0 10-8 0v1M5 19h14M12 11v4M12 7h.01"
-              />
-            </svg>
-          </button>
-
-          {/* Alternância de Tema */}
           {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
           <button
             onClick={toggleTheme}
