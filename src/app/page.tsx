@@ -2,6 +2,7 @@ import { Context } from '@/components/Context'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
 import { News } from '@/components/News'
+import Player from '@/components/Player'
 import Contact from '@/components/contact'
 import { Ignite } from '@/components/ignite'
 import { Network } from '@/components/network'
@@ -25,6 +26,7 @@ export default function Home() {
       <Ignite />
       <Techs />
       <Network />
+      <Player />
       <News />
       <Contact />
       <Footer />

@@ -60,8 +60,6 @@ const Header = () => {
 
         {/* Ícones de Usuário, Pesquisa, Tema e Idioma */}
         <div className="flex items-center space-x-4">
-          {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
-
           {/* Ícones de Bandeira para troca de idioma */}
           {['pt-PT', 'en'].map(locale => (
             // biome-ignore lint/a11y/useButtonType: <explanation>
@@ -77,7 +75,6 @@ const Header = () => {
         </div>
 
         {/* Menu Mobile */}
-        {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
       </div>
     </header>
   )

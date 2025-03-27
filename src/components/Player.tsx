@@ -41,7 +41,6 @@ export default function Player() {
         <div className="flex items-center justify-between">
           <Header />
           {/* Button to leave feedback */}
-          {/* biome-ignore lint/a11y/useButtonType: <explanation> */}
           <button
             type="button"
             className="flex items-center gap-2 rounded bg-violet-500 px-3 py-2 text-sm font-medium text-white hover:bg-blue-700"
