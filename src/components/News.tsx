@@ -105,85 +105,101 @@ export function News() {
           aproveitá-lo ao máximo! 🔍 Quais tendências tecnológicas mais chamam
           sua atenção no momento?
         </h1>
-        <div className="flex items-center">
-          <div className="flex flex-col">
-            <p className="text-2xl text-violet-700 font-semibold">
-              CANAIS ROCKETSEAT
-            </p>
+
+        <div className="flex itens-center justify-center">
+          <p className="font-bytesized m-4 text-5xl bg-gradient-to-r from-violet-700 to-pink-500 bg-clip-text text-transparent text-2xl font-bold">
+            CANAIS DE INFORMAÇÃO SOBRE O MUNDO DEV.
+          </p>
+        </div>
+        <div className="flex items-center justify-center gap-8">
+          <div className="m-3 p-2 flex flex-col border border-violet-600 border-collapse rounded-sm">
+            <p className="text-2xl text-violet-700 font-semibold">ROCKETSEAT</p>
+            <div className="flex flex-col">
+              <div className="flex gap-2">
+                <CiInstagram className="size-7 text-violet-500" />
+                <a
+                  className="text-blue-500"
+                  href="https://www.instagram.com/rocketseat/?_hsenc=p2ANqtz-9SfZwA9lsjU8MgmuZxFLQAZqnnowIuAAFMCX3C0W0ORbDmLKgyI1CXe6Q5miEYQSg0CD6Y3i1zv13fV_A63xvjCsvd5w&_hsmi=351572397"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  INSTAGRAN
+                </a>
+              </div>
+            </div>
             <div className="flex gap-2">
-              <CiInstagram className="size-7 text-violet-500" />
+              <CiLinkedin className="size-7 text-violet-500" />
               <a
                 className="text-blue-500"
-                href="https://www.instagram.com/rocketseat/?_hsenc=p2ANqtz-9SfZwA9lsjU8MgmuZxFLQAZqnnowIuAAFMCX3C0W0ORbDmLKgyI1CXe6Q5miEYQSg0CD6Y3i1zv13fV_A63xvjCsvd5w&_hsmi=351572397"
+                href="https://www.linkedin.com/school/rocketseat/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                INSTAGRAN
+                LINKEDIN
+              </a>
+            </div>
+            <div className="flex gap-2">
+              <CiYoutube className="size-7 text-violet-500" />
+              <a
+                className="text-blue-500"
+                href="https://www.youtube.com/@rocketseat"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YOUTUBE
               </a>
             </div>
           </div>
-          <div className="flex gap-2">
-            <CiLinkedin className="size-7 text-violet-500" />
-            <a
-              className="text-blue-500"
-              href="https://www.linkedin.com/school/rocketseat/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              LINKEDIN
-            </a>
+          <div className="border border-indigo-600 border-collapse rounded-md">
+            <div className="flex flex-col">
+              <p className="text-2xl text-violet-700 font-semibold">ALURA</p>
+              <div className="flex gap-2">
+                <CiYoutube className="size-7 text-violet-500" />
+                <a
+                  className="text-blue-500"
+                  href="https://www.youtube.com/@alura"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  YOUTUBE
+                </a>
+              </div>
+            </div>
           </div>
-          <div className="flex gap-2">
-            <CiYoutube className="size-7 text-violet-500" />
-            <a
-              className="text-blue-500"
-              href="https://www.youtube.com/@rocketseat"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              YOUTUBE
-            </a>
-          </div>
-          <p className="text-2xl text-violet-700 font-semibold">CANAIS ALURA</p>
-          <div className="flex gap-2">
-            <CiYoutube className="size-7 text-violet-500" />
-            <a
-              className="text-blue-500"
-              href="https://www.youtube.com/@alura"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              YOUTUBE
-            </a>
-          </div>
-          <p className="text-2xl text-violet-700 font-semibold">
-            CANAL FABIO AKITA
-          </p>
+          <div className="flex flex-col border border-indigo-600 border-collapse rounded-md">
+            <div className="flex flex-col ">
+              <p className="text-2xl text-violet-700 font-semibold">
+                FABIO AKITA
+              </p>
 
-          <div className="flex gap-2">
-            <CiYoutube className="size-7 text-violet-500" />
-            <a
-              className="text-blue-500"
-              href="https://www.youtube.com/@Akitando"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              YOUTUBE
-            </a>
+              <div className="flex gap-2 ">
+                <CiYoutube className="size-7 text-violet-500" />
+                <a
+                  className="text-blue-500"
+                  href="https://www.youtube.com/@Akitando"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  YOUTUBE
+                </a>
+              </div>
+            </div>
           </div>
-          <p className="text-2xl text-violet-700 font-semibold">
-            CANAL FABIO FELIPE DECHAMPS
-          </p>
-          <div className="flex gap-2">
-            <CiYoutube className="size-7 text-violet-500" />
-            <a
-              className="text-blue-500"
-              href="https://www.youtube.com/@FilipeDeschamps"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              YOUTUBE
-            </a>
+          <div className="flex flex-col border border-violet-600 border-collapse rounded-md">
+            <p className="text-2xl text-violet-700 font-semibold">
+              FELIPE DECHAMPS
+            </p>
+            <div className="flex gap-2">
+              <CiYoutube className="size-7 text-violet-500" />
+              <a
+                className="text-blue-500"
+                href="https://www.youtube.com/@FilipeDeschamps"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                YOUTUBE
+              </a>
+            </div>
           </div>
         </div>
       </div>

@@ -26,7 +26,6 @@ export default function Home() {
       <Ignite />
       <Techs />
       <Network />
-      <Player />
       <News />
       <Contact />
       <Footer />
