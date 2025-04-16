@@ -1,6 +1,6 @@
 'use client'
 
-import { Moon, Search, Sun } from 'lucide-react'
+import { Search } from 'lucide-react'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
@@ -61,7 +61,7 @@ const Header = () => {
         {/* Ícones de Usuário, Pesquisa, Tema e Idioma */}
         <div className="flex items-center space-x-4">
           {/* Ícones de Bandeira para troca de idioma */}
-          {['pt-PT', 'en'].map(locale => (
+          {['pt', 'en'].map(locale => (
             // biome-ignore lint/a11y/useButtonType: <explanation>
             <button key={locale} onClick={() => changeLanguage(locale)}>
               <Image

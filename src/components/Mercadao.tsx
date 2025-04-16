@@ -1,13 +1,18 @@
 export function Mercadao() {
   return (
     <>
-      <div>
+      <div className="flex justify-between bg-gray-800 p-4">
         <button type="button">Cadastro</button>
-        <input type="Pesquisa" />
+        <input
+          className="flex justify-around items-center bg-gray-700 text-white rounded-lg p-2"
+          type="Pesquisa"
+          placeholder="Pesquisar"
+        />
       </div>
-      <div>
-        <h1 className="m-4">CAMOS COMEÇAR NOSOS ESTUDOS</h1>
-        <strong className="text-white text-xl">
+
+      <h1 className="m-4">VAMOS COMEÇAR NOSOS ESTUDOS</h1>
+      <div className="flex m-8 p- 20 w-50 h-80 bg-transparent rounded-lg shadow-lg">
+        <strong className="font-sans text-white text-xl">
           Vamos falar sobre técnologia e analisar tudos os requisitos para se
           tornar uma bom profissional de T.I, isso não quer dizer que vai
           trabalhar somente na área de desenvovimento de software, mas estar
