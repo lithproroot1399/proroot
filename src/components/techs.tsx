@@ -44,8 +44,8 @@ export function Techs() {
             <span className="text-blue-400 text-lg font-semibold">Node.js</span>
           </div>
           <div className="flex flex-col items-center">
-            <IoLogoJavascript className="text-yellow-500 text-4xl" />
-            <span className="text-yellow-400 text-lg font-semibold">
+            <IoLogoJavascript className="text-violet-500 text-4xl" />
+            <span className="text-violet-500 text-lg font-semibold">
               JavaScript
             </span>
           </div>
@@ -54,8 +54,16 @@ export function Techs() {
             <span className="text-blue-400 text-lg font-semibold">React</span>
           </div>
           <div className="flex flex-col items-center">
-            <FaDatabase className="text-blue-500 text-4xl" />
-            <span className="text-blue-400 text-lg font-semibold">SQL</span>
+            <FaDatabase
+              className="text-violet-500
+             text-4xl"
+            />
+            <span
+              className="text-violet-500
+             text-lg font-semibold"
+            >
+              SQL
+            </span>
           </div>
         </div>
 

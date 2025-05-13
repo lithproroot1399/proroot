@@ -65,7 +65,7 @@ export function News() {
 
               <div className="m-3">
                 <IoNewspaperOutline className="size-6 text-lime-400" />
-                <p className="text-lime-300 font-semibold">BIGS TECH</p>
+                <p className="text-lime-300 font-semibold">BIG TECHS</p>
                 <h1 className="text-violet-500">
                   NOTICIAS DO DIA NO MUNDO TECH
                 </h1>

@@ -47,7 +47,7 @@ const Header = () => {
 
         {/* Menu de Navegação */}
         <nav className="hidden md:flex space-x-6">
-          {['Home', 'Serviços', 'Sobre', 'Contato'].map(item => (
+          {['Home', 'servicos', 'Sobre', 'Contato'].map(item => (
             <a
               key={item}
               href={`/${item.toLowerCase()}`}
