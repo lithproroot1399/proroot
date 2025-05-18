@@ -1,21 +1,32 @@
 import { FaDatabase, FaGithub, FaNodeJs, FaReact } from 'react-icons/fa'
+import { FaPython } from 'react-icons/fa'
 import { IoLogoJavascript } from 'react-icons/io'
 import { RiGitRepositoryFill } from 'react-icons/ri'
 
 export function Techs() {
   const techList = [
     {
-      name: 'SQL',
+      name: 'Node Js',
       link: 'https://www.microsoft.com/pt-br/sql-server/sql-server-downloads',
       dev: 'Banco de Dados',
     },
     {
-      name: 'Node.js',
+      name: 'JavaScript',
       link: 'https://nodejs.org/',
       dev: 'Backend',
     },
     {
       name: 'React',
+      link: 'https://www.microsoft.com/pt-br/sql-server/sql-server-downloads',
+      dev: 'Banco de Dados',
+    },
+    {
+      name: 'Python',
+      link: 'https://nodejs.org/',
+      dev: 'Backend',
+    },
+    {
+      name: 'Sql',
       link: 'https://react.dev/',
       dev: 'Frontend',
     },
@@ -54,7 +65,7 @@ export function Techs() {
             <span className="text-blue-400 text-lg font-semibold">React</span>
           </div>
           <div className="flex flex-col items-center">
-            <FaDatabase
+            <FaPython
               className="text-violet-500
              text-4xl"
             />
@@ -62,8 +73,12 @@ export function Techs() {
               className="text-violet-500
              text-lg font-semibold"
             >
-              SQL
+              PYTHON
             </span>
+          </div>
+          <div className="flex flex-col items-center">
+            <FaDatabase className="text-blue-500 text-4xl" />{' '}
+            <span className="text-blue-400 text-lg font-semibold">SQL</span>
           </div>
         </div>
 
@@ -79,6 +94,38 @@ export function Techs() {
           <tbody>
             {techList.map((tech, index) => (
               <tr
+                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
+                key={index}
+                className={`${
+                  index % 2 === 0
+                    ? 'bg-blue-500 text-white'
+                    : 'bg-gray-800 text-gray-300'
+                }`}
+              >
+                <td className="border border-blue-600 px-4 py-2">
+                  {tech.name}
+                </td>
+                <td className="border border-blue-600 px-4 py-2">
+                  <div className="flex items-center gap-2">
+                    <RiGitRepositoryFill className="text-blue-400 text-xl" />
+                    <a
+                      href={tech.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-blue-300 hover:text-blue-100 ml-1"
+                    >
+                      {tech.name}
+                    </a>
+                  </div>
+                </td>
+                <td className="border border-blue-600 px-4 py-2">{tech.dev}</td>
+              </tr>
+            ))}
+          </tbody>
+          <tbody>
+            {techList.map((tech, index) => (
+              <tr
+                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
                 key={index}
                 className={`${
                   index % 2 === 0
