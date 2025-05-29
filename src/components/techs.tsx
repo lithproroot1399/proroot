@@ -7,28 +7,28 @@ export function Techs() {
   const techList = [
     {
       name: 'Node Js',
-      link: 'https://www.microsoft.com/pt-br/sql-server/sql-server-downloads',
-      dev: 'Banco de Dados',
+      link: 'https://nodejs.org/pt',
+      dev: 'JavaScript além do navegador',
     },
     {
       name: 'JavaScript',
-      link: 'https://nodejs.org/',
-      dev: 'Backend',
+      link: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
+      dev: 'JavaScript V8',
     },
     {
       name: 'React',
-      link: 'https://www.microsoft.com/pt-br/sql-server/sql-server-downloads',
-      dev: 'Banco de Dados',
+      link: 'https://react.dev/',
+      dev: 'Front-end',
     },
     {
       name: 'Python',
-      link: 'https://nodejs.org/',
+      link: 'https://www.python.org/',
       dev: 'Backend',
     },
     {
       name: 'Sql',
-      link: 'https://react.dev/',
-      dev: 'Frontend',
+      link: 'https://www.microsoft.com/en-us/sql-server/sql-server-downloads',
+      dev: 'Banco de dados',
     },
     {
       name: 'JavaScript',

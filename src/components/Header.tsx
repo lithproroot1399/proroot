@@ -39,10 +39,12 @@ const Header = () => {
     <header className="bg-transparent backdrop-blur-md fixed w-full top-0 left-0 z-50 text-white">
       <div className="container mx-auto flex justify-between items-center py-4 px-6">
         {/* Logo */}
-        <div className="text-2xl font-bold">
-          <a href="/" className="text-white hover:text-gray-300">
-            proroot.pt
-          </a>
+        <div className="flex text-2xl font-bold">
+          <span className="flex items-center">
+            proroot.
+            <span className="text-green-600">p</span>{' '}
+            <span className="text-red-600">t</span>
+          </span>
         </div>
 
         {/* Menu de Navegação */}

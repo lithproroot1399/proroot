@@ -13,9 +13,9 @@ export function Network() {
       <div className=" justify-between gap-4 ">
         <div>
           <div className="m-6 flex flex-col items-center">
-            <div className="flex items-center gap-2">
-              <GrConfigure className="size-8 text-zinc-700" />
-              <h1 className="text-4xl text-zinc-700 font-semibold">
+            <div className="flex items-center gap-4">
+              <GrConfigure className="size-8 text-blue-500" />
+              <h1 className="text-4xl text-white font-semibold">
                 Suporte e manutenção.
               </h1>
             </div>

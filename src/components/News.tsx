@@ -87,7 +87,7 @@ export function News() {
         </div>
       </div>
       <div className="flex flex-col m-4 p-4 w-full text-justify">
-        <h1 className="text-2xl text-white">
+        <h1 className="bg-black text-white text-4xl m-3">
           Acompanhe as Últimas Tendências em Tecnologia 🚀 Vivemos em uma era
           onde a tecnologia evolui a um ritmo impressionante. A cada dia, novas
           inovações surgem, impactando desde a maneira como nos comunicamos até
@@ -107,7 +107,7 @@ export function News() {
         </h1>
 
         <div className="flex itens-center justify-center">
-          <p className="font-bytesized m-4 text-5xl bg-gradient-to-r from-violet-700 to-pink-500 bg-clip-text text-transparent text-2xl font-bold">
+          <p className="font-bytesized m-4 text-5xl bg-gradient-to-r from-violet-700 to-pink-500 bg-clip-text text-transparent font-bold">
             CANAIS DE INFORMAÇÃO SOBRE O MUNDO DEV.
           </p>
         </div>
