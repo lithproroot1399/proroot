@@ -5,6 +5,7 @@ import News from '@/components/News'
 import Contact from '@/components/contact'
 import { Ignite } from '@/components/ignite'
 import { Network } from '@/components/network'
+import ListaDeTarefas from '@/components/tarefas'
 import { Techs } from '@/components/techs'
 import Image from 'next/image'
 
@@ -20,14 +21,7 @@ export default function Home() {
           className="object-cover"
         />
       </div>
-
-      <Context />
-      <Ignite />
-      <Techs />
-      <Network />
-      <News />
-      <Contact />
-      <Footer />
+      <ListaDeTarefas />
     </>
   )
 }
