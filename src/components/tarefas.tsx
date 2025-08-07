@@ -1,5 +1,4 @@
 // biome-ignore lint/style/noUnusedTemplateLiteral: <explanation>
-`use client`
 
 import { useState } from 'react'
 
