@@ -20,7 +20,17 @@ export default function Home() {
           fill
           className="object-cover"
         />
+        
       </div>
+      <Context />
+      <Ignite />
+      
+      <Network />
+
+      <Techs />
+      <News />  
+      <Contact />
+      <Footer />
     </>
   )
 }
