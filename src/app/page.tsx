@@ -1,4 +1,4 @@
-
+import RepositoryPatternGuide from '@/components/RepositoryPatternGuide';
 import { Context } from '@/components/Context'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
@@ -27,6 +27,9 @@ export default function Home() {
       <Network />
 <News />
 <Contact />
+<div className="min-h-screen bg-gray-50 py-8">
+      <RepositoryPatternGuide />
+    </div>
 <Footer />
     </>
   )
