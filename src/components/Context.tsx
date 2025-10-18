@@ -1,8 +1,6 @@
 export function Context() {
   return (
-    <div className="flex flex-col bg-black">
-      <div className="m-5 flex bg-black text-justify">
-        <h1 className="bg-black text-white text-4xl m-3">
+        <h1 className="text-4xl m-3">
           Somos uma empresa especializada em Tecnologia da Informação,
           comprometida em fornecer soluções inovadoras e personalizadas para
           nossos clientes. Nossa missão é ajudar empresas a alcançar o sucesso
@@ -22,7 +20,5 @@ export function Context() {
           funcionamento. Diagnóstico preciso, reparos rápidos e prevenção de
           futuros problemas.
         </h1>
-      </div>
-    </div>
   )
 }

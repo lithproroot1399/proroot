@@ -1,85 +1,57 @@
 'use client'
-
-import { Search } from 'lucide-react'
+import { Context } from '@/components/Context'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
+import ThemeSwitcherImage from '@/components/ThemeSwitcherImage'
 import Image from 'next/image'
-import { useRouter } from 'next/navigation'
-import { useState } from 'react'
-import { useTheme } from '../hooks/useTheme'
+import RepositoryPatternGuide from './RepositoryPatternGuide'
 
-export function SearchBar({ onSearch }: { onSearch: (query: string) => void }) {
-  const [query, setQuery] = useState('')
-
+export default function Home() {
   return (
-    <div className="relative">
-      <Search className="absolute left-3 top-2.5 w-4 h-4 text-zinc-400" />
-      <input
-        type="text"
-        placeholder="Pesquisar..."
-        className="w-full p-2 pl-10 text-sm border border-zinc-600 rounded-md bg-zinc-900 text-white focus:outline-none focus:ring-2 focus:ring-violet-500"
-        value={query}
-        onChange={e => {
-          setQuery(e.target.value)
-          onSearch(e.target.value)
-        }}
-      />
+    <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
+      <header className="p-4 border-b border-gray-200 dark:border-gray-700">
+        <div className="flex justify-between items-center">
+          <div className="flex items-center gap-2">
+            <h1 className="text-2xl font-bold">proroot.</h1>
+          <span className="text-grenn-400">p</span>
+          <span className="text-red-400">t</span>
+          </div>
+          <div className="flex gap-4">
+            <ThemeSwitcher />
+            <ThemeSwitcherImage />
+          </div>
+        </div>
+      </header>
+      
+      <main className="p-0"> {/* Removido padding aqui */}
+        {/* Container da imagem sem margens */}
+        <div className="relative w-full h-screen -mx-0"> {/* Removido margin negativa se não for necessário */}
+          <Image
+            src="/assets/body_img.jpg"
+            alt="Imagem de fundo"
+            fill
+            className="object-cover w-full"
+            priority
+          />
+        </div>
+        
+        {/* Restante do conteúdo com padding normal */}
+        <div className="p-8"> {/* Adicionado container com padding para o resto do conteúdo */}
+          <Context />
+          <RepositoryPatternGuide />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
+            <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
+              <h3 className="font-semibold mb-2">Card Exemplo</h3>
+              <p>Este card muda de cor com o tema.</p>
+            </div>
+            
+            <div className="p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
+              <h3 className="font-semibold mb-2">Outro Card</h3>
+              <p>Cores que se adaptam ao tema.</p>
+            </div>
+          </div>
+        </div>
+      </main>
     </div>
   )
 }
-
-const Header = () => {
-  const { theme, toggleTheme } = useTheme()
-  const router = useRouter()
-
-  // Função para trocar o idioma
-  const changeLanguage = (locale: string) => {
-    router.push(`/${locale}`)
-  }
-
-  return (
-    <header className="bg-transparent backdrop-blur-md fixed w-full top-0 left-0 z-50 text-white">
-      <div className="container mx-auto flex justify-between items-center py-4 px-6">
-        {/* Logo */}
-        <div className="flex text-2xl font-bold">
-          <span className="flex items-center">
-            proroot.
-            <span className="text-green-600">p</span>{' '}
-            <span className="text-red-600">t</span>
-          </span>
-        </div>
-
-        {/* Menu de Navegação */}
-        <nav className="hidden md:flex space-x-6">
-          {['Home', 'servicos', 'Sobre', 'Contato'].map(item => (
-            <a
-              key={item}
-              href={`/${item.toLowerCase()}`}
-              className="text-white hover:text-violet-500"
-            >
-              {item}
-            </a>
-          ))}
-        </nav>
-
-        {/* Ícones de Usuário, Pesquisa, Tema e Idioma */}
-        <div className="flex items-center space-x-4">
-          {/* Ícones de Bandeira para troca de idioma */}
-          {['pt', 'en'].map(locale => (
-            // biome-ignore lint/a11y/useButtonType: <explanation>
-            <button key={locale} onClick={() => changeLanguage(locale)}>
-              <Image
-                src={`/assets/${locale}.png`}
-                alt={locale}
-                width={40}
-                height={20}
-              />
-            </button>
-          ))}
-        </div>
-
-        {/* Menu Mobile */}
-      </div>
-    </header>
-  )
-}
-
-export default Header
