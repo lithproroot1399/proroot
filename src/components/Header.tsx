@@ -10,10 +10,10 @@ export default function Home() {
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors">
       <header className="p-4 border-b border-gray-200 dark:border-gray-700">
         <div className="flex justify-between items-center">
-          <div className="flex items-center gap-2">
+          <div className="flex items-center">
             <h1 className="text-2xl font-bold">proroot.</h1>
-          <span className="text-grenn-400">p</span>
-          <span className="text-red-400">t</span>
+          <span className="text-2xl text-green-600 font-bold">p</span>
+          <span className="text-2xl text-red-400 font-bold">t</span>
           </div>
           <div className="flex gap-4">
             <ThemeSwitcher />
