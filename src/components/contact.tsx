@@ -4,14 +4,14 @@ import { MdOutlineEmail } from 'react-icons/md'
 
 export default function Contact() {
   return (
-    <div className="flex flex-col bg-black">
+    <div className="flex flex-col">
       <div className="m-8 flex">
         <div className="flex">
           <div className="flex flex-col justify-between">
             <div className="flex flex-col items-center gap-4">
               <FcGlobe className="text-green-400 size-7" />
-              <h1 className="text-4xl text-zinc-500">Nossa localização</h1>
-              <span className="text-sm text-white">
+              <h1 className="text-4xl ">Nossa localização</h1>
+              <span className="text-sm">
                 Aqui está o nosso escritório! Sinta-se à vontade para nos
                 visitar e conhecer de perto o nosso dia a dia.
               </span>

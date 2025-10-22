@@ -1,13 +1,17 @@
 // hooks/useCourse.ts
-"use client";
+'use client'
 
-import { useStore } from '@/store';
+import { useEffect } from 'react'
+import { useStore } from '../zustand-store'
 
 export function useCourse() {
-  const { course, load } = useStore(store => ({
-    course: store.course,
-    load: store.load,
-  }));
+  const { course, load, isLoading } = useStore()
+  
+  useEffect(() => {
+    if (!course) {
+      load()
+    }
+  }, [course, load])
 
-  return { course, load };
+  return { course, isLoading }
 }

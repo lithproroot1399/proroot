@@ -1,11 +1,13 @@
 'use client'
+import Player from '@/components/Player'
+import Contact from '@/components/contact'
 import { Network } from '@/components/network'
 import { Techs } from '@/components/techs'
 import { Context } from '@/components/Context'
 import ThemeSwitcher from '@/components/ThemeSwitcher'
 import ThemeSwitcherImage from '@/components/ThemeSwitcherImage'
 import Image from 'next/image'
-import RepositoryPatternGuide from './RepositoryPatternGuide'
+import News from '@/components/News'
 
 export default function Home() {
   return (
@@ -41,6 +43,9 @@ export default function Home() {
           <Context />
                 <Techs />
                       <Network />
+                      <Contact />
+                      <News />
+                      
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
             <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">

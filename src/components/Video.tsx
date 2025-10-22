@@ -1,37 +1,23 @@
-import { Loader } from 'lucide-react'
-import ReactPlayer from 'react-player'
-import { useCurrentLesson, useStore } from '../zustand-store'
+'use client'
+
+import { useCurrentLesson } from '../zustand-store'
 
 export function Video() {
   const { currentLesson } = useCurrentLesson()
-  const { isLoading, next } = useStore(store => {
-    return {
-      isLoading: store.isLoading,
-      next: store.next,
-    }
-  })
-
-  function handlePlayNext() {
-    next()
-  }
 
   return (
-    <div className="w-full bg-zinc-900 aspect-video">
-      {isLoading ? (
-        <div className="flex h-full items-center justify-center">
-          <Loader className="w-6 h-6 text-zinc-400 animate-spin" />
+    <div className="w-full bg-zinc-950 aspect-video">
+      {currentLesson ? (
+        <div className="flex items-center justify-center h-full">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold">{currentLesson.title}</h1>
+            <p className="text-zinc-400">Duração: {currentLesson.duration}</p>
+          </div>
         </div>
       ) : (
-        <ReactPlayer
-          width="100%"
-          height="100%"
-          controls
-          playing
-          onEnded={handlePlayNext}
-          /*url={'https://plataformaead.unigran.br/?pgn=videos&id=1${currentLesson?.id'}*/
-
-          url={`https://www.youtube.com/watch?v=${currentLesson?.id}`}
-        />
+        <div className="flex items-center justify-center h-full">
+          <p>Selecione uma aula para começar</p>
+        </div>
       )}
     </div>
   )
