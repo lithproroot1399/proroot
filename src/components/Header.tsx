@@ -40,11 +40,13 @@ export default function Home() {
         
         {/* Restante do conteúdo com padding normal */}
         <div className="p-8"> {/* Adicionado container com padding para o resto do conteúdo */}
-          <Context />
-                <Techs />
-                      <Network />
-                      <Contact />
-                      <News />
+          <div className="grid gap-10">
+  <Context />
+  <Techs />
+  <Network />
+  <Contact />
+  <News />
+</div>
                       
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
