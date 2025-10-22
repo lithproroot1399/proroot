@@ -15,7 +15,7 @@ export function Network() {
           <div className="m-6 flex flex-col items-center">
             <div className="flex items-center gap-4">
               <GrConfigure className="size-8 text-blue-500" />
-              <h1 className="text-4xl text-white font-semibold">
+              <h1 className="text-4xl text-green-300 font-semibold">
                 Suporte e manutenção.
               </h1>
             </div>

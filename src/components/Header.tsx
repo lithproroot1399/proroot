@@ -37,7 +37,7 @@ export default function Home() {
         {/* Restante do conteúdo com padding normal */}
         <div className="p-8"> {/* Adicionado container com padding para o resto do conteúdo */}
           <Context />
-          <RepositoryPatternGuide />
+          
           
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
             <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">

@@ -46,13 +46,14 @@ export function Techs() {
           <h1 className="text-3xl text-white font-semibold">
             Nosso portfólio no GitHub.
           </h1>
+          <span>Ba</span>
         </div>
 
         {/* Icons and Technology Labels */}
         <div className="flex flex-wrap justify-center items-center gap-8">
           <div className="flex flex-col items-center">
             <FaNodeJs className="text-blue-500 text-4xl" />
-            <span className="text-blue-400 text-lg font-semibold">Node.js</span>
+            <span className="text-blue-400 text-lg font-semibold">SOLID</span>
           </div>
           <div className="flex flex-col items-center">
             <IoLogoJavascript className="text-violet-500 text-4xl" />
