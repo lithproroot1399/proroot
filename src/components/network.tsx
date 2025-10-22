@@ -9,13 +9,13 @@ import tech_3 from '../../public/assets/tech_3.jpg'
 
 export function Network() {
   return (
-    <div className="bg-black flex justify-center items-center">
+    <div className="flex justify-center items-center">
       <div className=" justify-between gap-4 ">
         <div>
           <div className="m-6 flex flex-col items-center">
             <div className="flex items-center gap-4">
               <GrConfigure className="size-8 text-blue-500" />
-              <h1 className="text-4xl text-green-300 font-semibold">
+              <h1 className="text-4xl font-semibold">
                 Suporte e manutenção.
               </h1>
             </div>

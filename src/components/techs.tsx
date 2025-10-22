@@ -38,15 +38,14 @@ export function Techs() {
   ]
 
   return (
-    <div className="bg-black flex justify-center items-center min-h-screen p-4">
+    <div className="flex justify-center items-center min-h-screen p-4">
       <div className="flex flex-col items-center gap-6 w-full max-w-4xl">
         {/* GitHub Header Section */}
         <div className="flex items-center gap-4">
           <FaGithub className="text-blue-500 text-4xl" />
-          <h1 className="text-3xl text-white font-semibold">
+          <h1 className="text-3xl font-semibold">
             Nosso portfólio no GitHub.
           </h1>
-          <span>Ba</span>
         </div>
 
         {/* Icons and Technology Labels */}
