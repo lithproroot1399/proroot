@@ -1,13 +1,12 @@
 'use client'
-import Player from '@/components/Player'
+import { Context } from '@/components/Context'
+import News from '@/components/News'
+import ThemeSwitcher from '@/components/ThemeSwitcher'
+import ThemeSwitcherImage from '@/components/ThemeSwitcherImage'
 import Contact from '@/components/contact'
 import { Network } from '@/components/network'
 import { Techs } from '@/components/techs'
-import { Context } from '@/components/Context'
-import ThemeSwitcher from '@/components/ThemeSwitcher'
-import ThemeSwitcherImage from '@/components/ThemeSwitcherImage'
 import Image from 'next/image'
-import News from '@/components/News'
 
 export default function Home() {
   return (
@@ -26,41 +25,50 @@ export default function Home() {
         </div>
       </header>
 
-      <main className="p-0">
-        {' '}
-        {/* Removido padding aqui */}
-        {/* Container da imagem sem margens */}
-        <div className="relative w-full h-screen -mx-0">
-          {' '}
-          {/* Removido margin negativa se não for necessário */}
+      <main className="relative">
+        {/* Hero Section com imagem de fundo */}
+        <div className="relative w-full h-[60vh] min-h-[400px] max-h-[800px]">
           <Image
             src="/assets/body_img.jpg"
-            alt="Imagem de fundo"
+            alt="Proroot"
             fill
-            className="object-cover w-full"
+            className="object-cover object-center"
             priority
+            sizes="100vw"
           />
+          {/* Overlay escuro para melhor legibilidade se necessário */}
         </div>
-        {/* Restante do conteúdo com padding normal */}
-        <div className="p-8">
-          {' '}
-          {/* Adicionado container com padding para o resto do conteúdo */}
-          <div className="grid gap-10">
-            <Context />
-            <Techs />
-            <Network />
-            <Contact />
-            <News />
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-            <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
-              <h3 className="font-semibold mb-2">Card Exemplo</h3>
-              <p>Este card muda de cor com o tema.</p>
+
+        {/* Conteúdo principal */}
+        <div className="relative z-10 bg-white dark:bg-gray-900">
+          <div className="px-4 sm:px-6 lg:px-8 py-8 max-w-7xl mx-auto">
+            <div className="grid gap-10 sm:gap-12 lg:gap-16">
+              <Context />
+              <Techs />
+              <Network />
+              <Contact />
+              <News />
             </div>
 
-            <div className="p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
-              <h3 className="font-semibold mb-2">Outro Card</h3>
-              <p>Cores que se adaptam ao tema.</p>
+            {/* Cards adicionais */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-8 sm:mt-12">
+              <div className="p-4 sm:p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
+                <h3 className="font-semibold mb-2 text-lg sm:text-xl">
+                  Card Exemplo
+                </h3>
+                <p className="text-sm sm:text-base">
+                  Este card muda de cor com o tema.
+                </p>
+              </div>
+
+              <div className="p-4 sm:p-6 bg-blue-100 dark:bg-blue-900 rounded-lg">
+                <h3 className="font-semibold mb-2 text-lg sm:text-xl">
+                  Outro Card
+                </h3>
+                <p className="text-sm sm:text-base">
+                  Cores que se adaptam ao tema.
+                </p>
+              </div>
             </div>
           </div>
         </div>

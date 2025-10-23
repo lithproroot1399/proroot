@@ -1,6 +1,6 @@
 export function Context() {
   return (
-    <h1 className="text-4xl m-3">
+    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
       Somos uma empresa especializada em Tecnologia da Informação, comprometida
       em fornecer soluções inovadoras e personalizadas para nossos clientes.
       Nossa missão é ajudar empresas a alcançar o sucesso por meio da
