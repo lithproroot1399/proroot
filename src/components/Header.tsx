@@ -16,8 +16,8 @@ export default function Home() {
         <div className="flex justify-between items-center">
           <div className="flex items-center">
             <h1 className="text-2xl font-bold">proroot.</h1>
-          <span className="text-2xl text-green-600 font-bold">p</span>
-          <span className="text-2xl text-red-400 font-bold">t</span>
+            <span className="text-2xl text-green-600 font-bold">p</span>
+            <span className="text-2xl text-red-400 font-bold">t</span>
           </div>
           <div className="flex gap-4">
             <ThemeSwitcher />
@@ -25,10 +25,14 @@ export default function Home() {
           </div>
         </div>
       </header>
-      
-      <main className="p-0"> {/* Removido padding aqui */}
+
+      <main className="p-0">
+        {' '}
+        {/* Removido padding aqui */}
         {/* Container da imagem sem margens */}
-        <div className="relative w-full h-screen -mx-0"> {/* Removido margin negativa se não for necessário */}
+        <div className="relative w-full h-screen -mx-0">
+          {' '}
+          {/* Removido margin negativa se não for necessário */}
           <Image
             src="/assets/body_img.jpg"
             alt="Imagem de fundo"
@@ -37,24 +41,23 @@ export default function Home() {
             priority
           />
         </div>
-        
         {/* Restante do conteúdo com padding normal */}
-        <div className="p-8"> {/* Adicionado container com padding para o resto do conteúdo */}
+        <div className="p-8">
+          {' '}
+          {/* Adicionado container com padding para o resto do conteúdo */}
           <div className="grid gap-10">
-  <Context />
-  <Techs />
-  <Network />
-  <Contact />
-  <News />
-</div>
-                      
-          
+            <Context />
+            <Techs />
+            <Network />
+            <Contact />
+            <News />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
             <div className="p-4 bg-gray-100 dark:bg-gray-800 rounded-lg">
               <h3 className="font-semibold mb-2">Card Exemplo</h3>
               <p>Este card muda de cor com o tema.</p>
             </div>
-            
+
             <div className="p-4 bg-blue-100 dark:bg-blue-900 rounded-lg">
               <h3 className="font-semibold mb-2">Outro Card</h3>
               <p>Cores que se adaptam ao tema.</p>

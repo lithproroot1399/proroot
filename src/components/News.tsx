@@ -6,9 +6,8 @@ export default function News() {
     <div className="flex flex-col items-center justify-center w-full h-full p-8">
       <div className="flex items-center justify-center gap-8">
         <div>
-            <p className="text-2xl">NEWS PROROOT TECHS</p>
-
-</div>        
+          <p className="text-2xl">NEWS PROROOT TECHS</p>
+        </div>
         <div className="flex flex-col items-center justify-center w-64 h-44 border-2 border-violet-600 rounded-md p-4 bg-black">
           <p className="text-2xl text-violet-700 font-semibold">ROCKETSEAT</p>
           <div className="flex flex-col">

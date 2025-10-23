@@ -43,9 +43,7 @@ export function Techs() {
         {/* GitHub Header Section */}
         <div className="flex items-center gap-4">
           <FaGithub className="text-blue-500 text-4xl" />
-          <h1 className="text-3xl font-semibold">
-            Nosso portfólio no GitHub.
-          </h1>
+          <h1 className="text-3xl font-semibold">Nosso portfólio no GitHub.</h1>
         </div>
 
         {/* Icons and Technology Labels */}

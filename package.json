@@ -8,7 +8,10 @@
     "server": "json-server server.json --port 3001",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "format": "biome format --write .",
+    "lint": "biome lint .",
+    "check": "biome check .",
+    "organize": "biome check --organize-imports --write ."
   },
   "dependencies": {
     "@next/font": "^14.2.15",
@@ -27,7 +30,7 @@
     "zustand": "^5.0.8"
   },
   "devDependencies": {
-    "@biomejs/biome": "1.9.4",
+    "@biomejs/biome": "^1.9.4",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
