@@ -6,14 +6,14 @@ import { RiGitRepositoryFill } from 'react-icons/ri'
 export function Techs() {
   const techList = [
     {
-      name: 'Node Js',
+      name: 'Node.js',
       link: 'https://nodejs.org/pt',
       dev: 'JavaScript além do navegador',
     },
     {
       name: 'JavaScript',
       link: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
-      dev: 'JavaScript V8',
+      dev: 'Linguagem de programação',
     },
     {
       name: 'React',
@@ -23,17 +23,27 @@ export function Techs() {
     {
       name: 'Python',
       link: 'https://www.python.org/',
-      dev: 'Backend',
+      dev: 'Backend / Data',
     },
     {
-      name: 'Sql',
-      link: 'https://www.microsoft.com/en-us/sql-server/sql-server-downloads',
-      dev: 'Banco de dados',
+      name: 'SQL',
+      link: 'https://www.postgresql.org/',
+      dev: 'Banco de dados relacional',
     },
     {
-      name: 'JavaScript',
-      link: 'https://developer.mozilla.org/pt-BR/docs/Web/JavaScript',
-      dev: 'Frontend/Backend',
+      name: 'TypeScript',
+      link: 'https://www.typescriptlang.org/',
+      dev: 'Superset tipado do JavaScript',
+    },
+    {
+      name: 'Next.js',
+      link: 'https://nextjs.org/',
+      dev: 'Framework React para produção',
+    },
+    {
+      name: 'Docker',
+      link: 'https://www.docker.com/',
+      dev: 'Containerização',
     },
   ]
 
@@ -89,37 +99,6 @@ export function Techs() {
               <th className="border border-blue-600 px-4 py-2">DEV</th>
             </tr>
           </thead>
-          <tbody>
-            {techList.map((tech, index) => (
-              <tr
-                // biome-ignore lint/suspicious/noArrayIndexKey: <explanation>
-                key={index}
-                className={`${
-                  index % 2 === 0
-                    ? 'bg-blue-500 text-white'
-                    : 'bg-gray-800 text-gray-300'
-                }`}
-              >
-                <td className="border border-blue-600 px-4 py-2">
-                  {tech.name}
-                </td>
-                <td className="border border-blue-600 px-4 py-2">
-                  <div className="flex items-center gap-2">
-                    <RiGitRepositoryFill className="text-blue-400 text-xl" />
-                    <a
-                      href={tech.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-blue-300 hover:text-blue-100 ml-1"
-                    >
-                      {tech.name}
-                    </a>
-                  </div>
-                </td>
-                <td className="border border-blue-600 px-4 py-2">{tech.dev}</td>
-              </tr>
-            ))}
-          </tbody>
           <tbody>
             {techList.map((tech, index) => (
               <tr

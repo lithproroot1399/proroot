@@ -47,29 +47,9 @@ export default function Home() {
               <Techs />
               <Network />
               <Contact />
-              <News />
             </div>
 
             {/* Cards adicionais */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-8 sm:mt-12">
-              <div className="p-4 sm:p-6 bg-gray-100 dark:bg-gray-800 rounded-lg">
-                <h3 className="font-semibold mb-2 text-lg sm:text-xl">
-                  Card Exemplo
-                </h3>
-                <p className="text-sm sm:text-base">
-                  Este card muda de cor com o tema.
-                </p>
-              </div>
-
-              <div className="p-4 sm:p-6 bg-blue-100 dark:bg-blue-900 rounded-lg">
-                <h3 className="font-semibold mb-2 text-lg sm:text-xl">
-                  Outro Card
-                </h3>
-                <p className="text-sm sm:text-base">
-                  Cores que se adaptam ao tema.
-                </p>
-              </div>
-            </div>
           </div>
         </div>
       </main>
